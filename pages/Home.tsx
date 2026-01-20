@@ -29,7 +29,7 @@ const Home: React.FC = () => {
 
         <div className="relative z-10 max-w-6xl mx-auto text-center">
 
-          {/* PLATFORM QUICK ACCESS (FIRST IMPRESSION) */}
+          {/* PLATFORM QUICK ACCESS */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-14">
             {PLATFORMS.map(platform => (
               <Link
@@ -42,7 +42,7 @@ const Home: React.FC = () => {
             ))}
           </div>
 
-          {/* REDUCED HERO TEXT */}
+          {/* HERO TEXT */}
           <h1 className="text-3xl md:text-4xl font-serif font-bold text-[#310A31] mb-4">
             Trending Deals Across Top Platforms
           </h1>
@@ -56,18 +56,9 @@ const Home: React.FC = () => {
       <section className="max-w-6xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           {[
-            {
-              title: 'Curated Picks',
-              desc: 'Only quality products make it to our list.'
-            },
-            {
-              title: 'Social Trends',
-              desc: 'Viral and trending products on Instagram.'
-            },
-            {
-              title: 'Verified Deals',
-              desc: 'Trusted affiliate links from top platforms.'
-            }
+            { title: 'Curated Picks', desc: 'Only quality products make it to our list.' },
+            { title: 'Social Trends', desc: 'Viral and trending products on Instagram.' },
+            { title: 'Verified Deals', desc: 'Trusted affiliate links from top platforms.' }
           ].map((item, idx) => (
             <div
               key={idx}
@@ -110,8 +101,12 @@ const Home: React.FC = () => {
       {/* INSTAGRAM + WHATSAPP CTA */}
       <section className="max-w-4xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          {/* INSTAGRAM */}
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/beauty.hubbbb/?utm_source=qr&r=nametag"
+            target="_blank"
+            rel="noopener noreferrer"
             className="p-8 rounded-[40px] bg-gradient-to-br from-purple-600 to-pink-500 text-white custom-shadow"
           >
             <h3 className="text-2xl font-serif font-bold mb-2">
@@ -122,8 +117,11 @@ const Home: React.FC = () => {
             </p>
           </a>
 
+          {/* WHATSAPP */}
           <a
-            href="https://whatsapp.com"
+            href="https://whatsapp.com/channel/0029Vb7DX1b30LKT5g1Fdm2y"
+            target="_blank"
+            rel="noopener noreferrer"
             className="p-8 rounded-[40px] bg-green-600 text-white custom-shadow"
           >
             <h3 className="text-2xl font-serif font-bold mb-2">
@@ -133,6 +131,7 @@ const Home: React.FC = () => {
               Instant deal alerts directly to you.
             </p>
           </a>
+
         </div>
       </section>
     </div>
