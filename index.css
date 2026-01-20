@@ -1,11 +1,11 @@
-/* ==============================
-   PREMIUM ANIMATIONS
+/* ===============================
+   ADVANCED ANIMATIONS
 ================================*/
 
 @keyframes fade-up {
   0% {
     opacity: 0;
-    transform: translateY(32px) scale(0.97);
+    transform: translateY(40px) scale(0.96);
   }
   100% {
     opacity: 1;
@@ -13,37 +13,78 @@
   }
 }
 
-.animate-fade-up {
-  animation: fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-18px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
-/* ==============================
-   PREMIUM SHADOWS
+@keyframes slow-pulse {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: slow-pulse 4s ease-in-out infinite;
+}
+
+/* ===============================
+   PREMIUM SHADOWS & DEPTH
 ================================*/
 
 .custom-shadow {
   box-shadow:
-    0 15px 40px rgba(49, 10, 49, 0.15),
-    0 4px 12px rgba(0, 0, 0, 0.06);
+    0 25px 60px rgba(49, 10, 49, 0.18),
+    0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
-/* ==============================
-   GLASS EFFECT
+/* ===============================
+   GLASS / FROSTED UI
 ================================*/
 
 .glass {
   background: rgba(255, 255, 255, 0.55);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
-/* ==============================
+/* ===============================
+   MAGNETIC HOVER FEEL
+================================*/
+
+.magnetic {
+  transition: transform 0.25s ease;
+}
+
+.magnetic:hover {
+  transform: translateY(-6px) scale(1.03);
+}
+
+/* ===============================
    GLOBAL SMOOTHNESS
 ================================*/
 
 * {
   transition-property: background-color, border-color, color, opacity, box-shadow, transform;
-  transition-duration: 260ms;
+  transition-duration: 280ms;
   transition-timing-function: ease;
 }
