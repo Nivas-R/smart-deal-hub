@@ -1,0 +1,7 @@
+{
+  "name": "Smart Deal Hub",
+  "description": "A premium affiliate marketing landing page designed for Instagram Reel traffic, featuring curated product lists from Amazon, Flipkart, Myntra, and Meesho.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
