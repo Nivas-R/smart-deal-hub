@@ -21,15 +21,12 @@ const Home: React.FC = () => {
 
       {/* HERO + PLATFORM FIRST */}
       <section className="relative pt-24 pb-20 px-4 overflow-hidden">
-        {/* Background Glow */}
         <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#310A31] rounded-full blur-[120px]"></div>
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#310A31] rounded-full blur-[120px]"></div>
         </div>
 
         <div className="relative z-10 max-w-6xl mx-auto text-center">
-
-          {/* PLATFORM QUICK ACCESS */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-14">
             {PLATFORMS.map(platform => (
               <Link
@@ -42,7 +39,6 @@ const Home: React.FC = () => {
             ))}
           </div>
 
-          {/* HERO TEXT */}
           <h1 className="text-3xl md:text-4xl font-serif font-bold text-[#310A31] mb-4">
             Trending Deals Across Top Platforms
           </h1>
@@ -83,10 +79,7 @@ const Home: React.FC = () => {
         {loading ? (
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[1, 2, 3, 4].map(i => (
-              <div
-                key={i}
-                className="aspect-[3/4] rounded-3xl bg-white animate-pulse"
-              ></div>
+              <div key={i} className="aspect-[3/4] rounded-3xl bg-white animate-pulse"></div>
             ))}
           </div>
         ) : (
@@ -104,7 +97,7 @@ const Home: React.FC = () => {
 
           {/* INSTAGRAM */}
           <a
-            href="https://www.instagram.com/beauty.hubbbb/?utm_source=qr&r=nametag"
+            href="https://www.instagram.com/smart.deal.hub_/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-8 rounded-[40px] bg-gradient-to-br from-purple-600 to-pink-500 text-white custom-shadow"
