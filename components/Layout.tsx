@@ -89,7 +89,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             </div>
             <div>
               <h4 className="font-semibold mb-4">Support & Contact</h4>
-              <p className="text-sm text-gray-600 mb-2">Email: hello@smartdealhub.com</p>
+              <p className="text-sm text-gray-600 mb-2">Email: businessguymr@gmail.com</p>
               <div className="bg-[#F4ECD6] p-4 rounded-xl mt-4 text-xs text-[#310A31]/80 italic">
                 <strong>Affiliate Disclosure:</strong> As an affiliate partner, we may earn a small commission from qualifying purchases at no extra cost to you. This helps us keep this platform running.
               </div>
