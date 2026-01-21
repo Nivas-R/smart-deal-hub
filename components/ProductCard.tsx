@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Product } from '../types';
 
@@ -16,15 +15,13 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           loading="lazy"
         />
-        <div className="absolute top-3 left-3">
-          <span className="bg-[#310A31] text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
-            {product.platform}
-          </span>
-        </div>
       </div>
       
       <div className="p-5">
-        <h3 className="text-lg font-serif font-bold mb-2 line-clamp-1">{product.name}</h3>
+        <h3 className="text-lg font-serif font-bold mb-2 line-clamp-1">
+          {product.name}
+        </h3>
+
         <p className="text-sm text-gray-500 mb-5 line-clamp-2 h-10">
           {product.description}
         </p>
