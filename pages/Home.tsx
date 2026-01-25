@@ -18,21 +18,71 @@ const Home: React.FC = () => {
     <div className="space-y-28 pb-28 overflow-hidden">
 
       {/* HERO */}
-      <section className="relative pt-32 pb-32 px-4">
-        <div className="absolute inset-0 z-0 pointer-events-none">
-          <div className="absolute top-24 left-20 w-[420px] h-[420px] bg-[#310A31] rounded-full blur-[160px] opacity-40 animate-float"></div>
-          <div className="absolute bottom-24 right-20 w-[420px] h-[420px] bg-[#310A31] rounded-full blur-[160px] opacity-30 animate-float"></div>
-        </div>
+      {/* HERO */}
+<section className="relative pt-32 pb-40 px-4 overflow-hidden">
 
-        <div className="relative z-10 max-w-6xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-[#310A31] mb-6 animate-fade-up">
-            Smart Deals. Zero Effort.
-          </h1>
-          <p className="text-lg text-gray-700 max-w-2xl mx-auto animate-fade-up">
-            Discover handpicked products and the best deals in one place.
-          </p>
+  {/* Background glow */}
+  <div className="absolute inset-0 pointer-events-none">
+    <div className="absolute top-24 left-16 w-[420px] h-[420px] bg-[#310A31] rounded-full blur-[180px] opacity-40 animate-float"></div>
+    <div className="absolute bottom-24 right-16 w-[420px] h-[420px] bg-[#310A31] rounded-full blur-[180px] opacity-30 animate-float"></div>
+  </div>
+
+  <div className="relative z-10 max-w-6xl mx-auto text-center">
+
+    {/* Title */}
+    <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6
+                   bg-gradient-to-r from-[#7a1849] via-[#d14b8f] to-[#7a1849]
+                   bg-[length:300%_100%] bg-clip-text text-transparent
+                   animate-fade-up"
+        style={{ animation: 'gradientFlow 6s linear infinite' }}>
+      Smart Deals. Zero Effort.
+    </h1>
+
+    {/* Subtitle */}
+    <p className="text-lg text-gray-700 max-w-2xl mx-auto animate-fade-up">
+      Discover handpicked products and the best deals in one place.
+    </p>
+
+    {/* Platform Cards */}
+    <div className="mt-16 flex flex-wrap justify-center gap-8">
+
+      {[
+        { src: '/amazon.jpg', name: 'Amazon' },
+        { src: '/flipkart.jpg', name: 'Flipkart' },
+        { src: '/myntra.jpg', name: 'Myntra' },
+        { src: '/meesho.jpg', name: 'Meesho' },
+      ].map((platform, idx) => (
+        <div
+          key={platform.name}
+          style={{ animationDelay: `${idx * 120}ms` }}
+          className="w-[180px] h-[200px] rounded-3xl glass custom-shadow
+                     flex flex-col items-center justify-center gap-4
+                     animate-fade-up animate-float magnetic"
+        >
+          <img
+            src={platform.src}
+            alt={platform.name}
+            className="w-[110px] h-[110px] object-contain"
+          />
+          <span className="font-semibold tracking-wide">
+            {platform.name}
+          </span>
         </div>
-      </section>
+      ))}
+
+    </div>
+
+    {/* Platform Text */}
+    <div className="mt-6 text-sm text-gray-600 tracking-wide">
+      Amazon <span className="mx-2">|</span>
+      Flipkart <span className="mx-2">|</span>
+      Myntra <span className="mx-2">|</span>
+      Meesho
+    </div>
+
+  </div>
+</section>
+
 
       {/* ALL PRODUCTS */}
       <section className="max-w-6xl mx-auto px-4">
