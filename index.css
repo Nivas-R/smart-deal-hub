@@ -88,3 +88,8 @@
   transition-duration: 280ms;
   transition-timing-function: ease;
 }
+@keyframes gradientFlow {
+  to {
+    background-position: 300% center;
+  }
+}
