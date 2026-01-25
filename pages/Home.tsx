@@ -118,7 +118,7 @@ const Home: React.FC = () => {
       <section className="max-w-4xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <a
-            href="https://www.instagram.com/smart.deal.hub_/"
+            href="https://www.instagram.com/trendora._hub/"
             target="_blank"
             rel="noopener noreferrer"
             className="magnetic animate-pulse-slow p-10 rounded-[44px]
@@ -150,3 +150,5 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+
+
